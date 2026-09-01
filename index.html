@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Two-minute evaluator demo of Resilience Lab, a deterministic AI workflow reliability puzzle.">
+  <title>Resilience Lab — judge demo</title>
+  <style>
+    :root{color-scheme:dark;--bg:#08111f;--panel:#101d31;--ink:#f7fbff;--muted:#a8bad0;--cyan:#6ee7ff;--green:#7bf1a8}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 20% 0,#173152 0,var(--bg) 42%);color:var(--ink);font:16px/1.55 system-ui,-apple-system,sans-serif}
+    main{width:min(1050px,92vw);margin:auto;padding:52px 0 64px}.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem}
+    h1{font-size:clamp(2.3rem,6vw,5.4rem);line-height:.95;margin:.25em 0}.accent{color:var(--green)} .lede{font-size:1.2rem;color:var(--muted);max-width:780px}
+    .facts{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.facts span{background:var(--panel);border:1px solid #29415f;border-radius:999px;padding:7px 12px;color:#d9e8f8;font-size:.9rem}
+    .video{margin:34px 0;background:#02060c;border:1px solid #29415f;border-radius:18px;overflow:hidden;box-shadow:0 24px 80px #0008}video{display:block;width:100%;aspect-ratio:16/9}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}.card{background:var(--panel);border:1px solid #29415f;border-radius:14px;padding:20px}.card b{color:var(--green)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}a.button{display:inline-block;padding:12px 17px;border-radius:10px;text-decoration:none;font-weight:800;background:var(--cyan);color:#06111d}a.secondary{background:transparent;color:var(--cyan);border:1px solid var(--cyan)}
+    .truth{border-left:4px solid #ffd166;padding:12px 16px;background:#2a2314;color:#ffe5a6;border-radius:0 10px 10px 0;margin-top:30px}footer{color:var(--muted);font-size:.88rem;margin-top:38px}
+  </style>
+</head>
+<body><main>
+  <p class="eyebrow">Deterministic workflow reliability lab</p>
+  <h1>Build the workflow.<br><span class="accent">Survive the failure.</span></h1>
+  <p class="lede">A two-minute evaluator walkthrough of Resilience Lab: seeded AI-workflow puzzles, controlled faults, inspectable recovery, validation, scoring, and a recorded human decision.</p>
+  <div class="facts"><span>H.264 · 1280×720</span><span>120 seconds</span><span>No API key</span><span>Local mock mode</span><span>9 deterministic tests</span></div>
+  <section class="video"><video controls preload="metadata" poster="preview.jpg"><source src="resilience-lab-demo.mp4" type="video/mp4">Download the MP4 to view the demo.</video></section>
+  <div class="actions">
+    <a class="button" href="https://github.com/Kndll33/resilience-lab-demo/releases/download/v1.0.0/resilience-lab-demo.mp4">Download versioned MP4</a>
+    <a class="button secondary" href="https://www.topcoder.com/challenges/7fbce8d9-92e2-4770-a4a0-48f29c2b29e5">View official challenge</a>
+    <a class="button secondary" href="https://github.com/Kndll33/resilience-lab-demo">Evidence repository</a>
+  </div>
+  <section class="grid">
+    <article class="card"><b>Faults are explicit</b><br>Controlled missing fields and timeouts are visible in the execution trace.</article>
+    <article class="card"><b>Recovery is inspectable</b><br>Retry and fallback transitions show what failed, what recovered, and what completed.</article>
+    <article class="card"><b>Humans retain control</b><br>Approve, edit, and reject paths pause before the simulated external action.</article>
+  </section>
+  <p class="truth"><strong>Accuracy boundary:</strong> this is a deterministic educational simulation, not a production runtime. It calls no live AI model or external action API. A public demo is not a claim of Topcoder registration, submission, judging, award, or payment.</p>
+  <footer>Demo SHA-256: 5547443a1e2a2c203c7cd1352a5d820cb2309dede5e7ecc7fee53ba80ef82c00</footer>
+</main></body></html>
