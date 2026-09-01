@@ -10,10 +10,10 @@ A 3:09 silent walkthrough of an original browser-accessible AI workflow reliabil
 
 The landing page maps the four highest-weight [official challenge criteria](https://www.topcoder.com/challenges/7fbce8d9-92e2-4770-a4a0-48f29c2b29e5) to one-click captioned evidence. These links route evidence; they do not claim a score.
 
-- **25% — Builder & complete journey:** 0:15 baseline trace
-- **25% — Failure handling & recovery:** 0:30 controlled retry
-- **15% — Validation & human review:** 1:15 human control gate
-- **15% — Trace & reliability feedback:** 0:45 recovered trace
+- **25% — Workflow Builder and Functional Completeness:** 0:15 baseline trace
+- **25% — Failure Handling and Recovery:** 0:30 controlled retry
+- **15% — Validation and Human Review:** 1:15 human control gate
+- **15% — Execution Trace and Reliability Feedback:** 0:45 recovered trace
 
 ## Evaluator chapters
 
