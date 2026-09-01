@@ -6,6 +6,25 @@ A 3:09 silent walkthrough of an original browser-accessible AI workflow reliabil
 
 ![Resilience Lab workflow trace](./preview.jpg)
 
+## Evaluator chapters
+
+The silent video has visible captions throughout. The landing page provides one-click chapter controls; direct MP4 timestamps are listed here for quick review.
+
+| Time | Reproducible behavior |
+|---|---|
+| 0:00 | Scope and truthful boundary |
+| 0:15 | Baseline trace |
+| 0:30 | Controlled retry |
+| 0:45 | Recovered 100/100 trace |
+| 1:00 | Local fallback |
+| 1:15 | Human control gate |
+| 1:30 | Human edit and resume |
+| 1:45 | Unresolved safe stop |
+| 2:00 | Failed/skipped verdict |
+| 2:15 | Human rejection |
+| 2:30 | Three-minute judge path |
+| 2:45 | Public evidence and limits |
+
 ## What the video demonstrates
 
 - a dependency-free local mock mode (no API key or paid model);

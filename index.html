@@ -13,6 +13,7 @@
     .facts{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.facts span{background:var(--panel);border:1px solid #29415f;border-radius:999px;padding:7px 12px;color:#d9e8f8;font-size:.9rem}
     .video{margin:34px 0;background:#02060c;border:1px solid #29415f;border-radius:18px;overflow:hidden;box-shadow:0 24px 80px #0008}video{display:block;width:100%;aspect-ratio:16/9}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}.card{background:var(--panel);border:1px solid #29415f;border-radius:14px;padding:20px}.card b{color:var(--green)}
+    .chapters{margin:24px 0 34px}.chapters h2{margin-bottom:8px}.chapters p{color:var(--muted);margin-top:0}.chapter-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:9px}.chapter{width:100%;text-align:left;background:var(--panel);color:var(--ink);border:1px solid #29415f;border-radius:10px;padding:10px 12px;cursor:pointer}.chapter:hover,.chapter:focus{border-color:var(--cyan);outline:none}.chapter strong{color:var(--cyan);margin-right:7px}
     .actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}a.button{display:inline-block;padding:12px 17px;border-radius:10px;text-decoration:none;font-weight:800;background:var(--cyan);color:#06111d}a.secondary{background:transparent;color:var(--cyan);border:1px solid var(--cyan)}
     .truth{border-left:4px solid #ffd166;padding:12px 16px;background:#2a2314;color:#ffe5a6;border-radius:0 10px 10px 0;margin-top:30px}footer{color:var(--muted);font-size:.88rem;margin-top:38px}
   </style>
@@ -22,7 +23,25 @@
   <h1>Build the workflow.<br><span class="accent">Survive the failure.</span></h1>
   <p class="lede">A 3:09 evaluator walkthrough of Resilience Lab: seeded AI-workflow puzzles, controlled faults, inspectable recovery, validation, scoring, human edit, and safe rejection.</p>
   <div class="facts"><span>H.264 · 1280×720</span><span>3:09</span><span>No API key</span><span>Local mock mode</span><span>9 deterministic tests</span></div>
-  <section class="video"><video controls preload="metadata" poster="preview.jpg"><source src="resilience-lab-demo.mp4" type="video/mp4">Download the MP4 to view the demo.</video></section>
+  <section class="video"><video id="demo" controls preload="metadata" poster="preview.jpg"><source src="resilience-lab-demo.mp4" type="video/mp4">Download the MP4 to view the demo.</video></section>
+  <section class="chapters" aria-labelledby="chapters-title">
+    <h2 id="chapters-title">Evaluator chapters</h2>
+    <p>Jump directly to a reproducible behavior. The video uses visible captions and requires no audio.</p>
+    <div class="chapter-list">
+      <button class="chapter" data-time="0"><strong>0:00</strong>Scope and truthful boundary</button>
+      <button class="chapter" data-time="15"><strong>0:15</strong>Baseline trace</button>
+      <button class="chapter" data-time="30"><strong>0:30</strong>Controlled retry</button>
+      <button class="chapter" data-time="45"><strong>0:45</strong>Recovered 100/100 trace</button>
+      <button class="chapter" data-time="60"><strong>1:00</strong>Local fallback</button>
+      <button class="chapter" data-time="75"><strong>1:15</strong>Human control gate</button>
+      <button class="chapter" data-time="90"><strong>1:30</strong>Human edit and resume</button>
+      <button class="chapter" data-time="105"><strong>1:45</strong>Unresolved safe stop</button>
+      <button class="chapter" data-time="120"><strong>2:00</strong>Failed/skipped verdict</button>
+      <button class="chapter" data-time="135"><strong>2:15</strong>Human rejection</button>
+      <button class="chapter" data-time="150"><strong>2:30</strong>Three-minute judge path</button>
+      <button class="chapter" data-time="165"><strong>2:45</strong>Public evidence and limits</button>
+    </div>
+  </section>
   <div class="actions">
     <a class="button" href="https://github.com/Kndll33/resilience-lab-demo/releases">Download versioned MP4</a>
     <a class="button secondary" href="https://www.topcoder.com/challenges/7fbce8d9-92e2-4770-a4a0-48f29c2b29e5">View official challenge</a>
@@ -35,4 +54,11 @@
   </section>
   <p class="truth"><strong>Accuracy boundary:</strong> this is a deterministic educational simulation, not a production runtime. It calls no live AI model or external action API. A public demo is not a claim of Topcoder registration, submission, judging, award, or payment.</p>
   <footer>Versioned checksums and downloadable assets are published with each GitHub release.</footer>
-</main></body></html>
+</main><script>
+  const video = document.getElementById('demo');
+  document.querySelectorAll('.chapter').forEach((button) => button.addEventListener('click', () => {
+    video.currentTime = Number(button.dataset.time);
+    video.play();
+    video.scrollIntoView({behavior: 'smooth', block: 'center'});
+  }));
+</script></body></html>
