@@ -2,7 +2,7 @@
 
 A two-minute silent walkthrough of an original browser-accessible AI workflow reliability puzzle entry prepared for Topcoder challenge [AI Workflow Puzzle Builder](https://www.topcoder.com/challenges/7fbce8d9-92e2-4770-a4a0-48f29c2b29e5).
 
-[Download or play the MP4](./resilience-lab-demo.mp4)
+[Play the repository MP4](./resilience-lab-demo.mp4) · [Download the versioned H.264 release](https://github.com/Kndll33/resilience-lab-demo/releases/download/v1.0.0/resilience-lab-demo.mp4)
 
 ![Resilience Lab workflow trace](./preview.jpg)
 
