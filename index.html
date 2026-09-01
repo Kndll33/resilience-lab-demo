@@ -11,6 +11,7 @@
     main{width:min(1050px,92vw);margin:auto;padding:52px 0 64px}.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem}
     h1{font-size:clamp(2.3rem,6vw,5.4rem);line-height:.95;margin:.25em 0}.accent{color:var(--green)} .lede{font-size:1.2rem;color:var(--muted);max-width:780px}
     .facts{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0}.facts span{background:var(--panel);border:1px solid #29415f;border-radius:999px;padding:7px 12px;color:#d9e8f8;font-size:.9rem}
+    .rubric{margin:28px 0;background:linear-gradient(135deg,#102743,#101d31);border:1px solid #3a587a;border-radius:16px;padding:20px}.rubric h2{margin:0 0 4px}.rubric p{color:var(--muted);margin:0 0 14px}.rubric p a{color:var(--cyan)}.rubric-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:9px}.rubric-button{width:100%;text-align:left;background:#071426;color:var(--ink);border:1px solid #3a587a;border-radius:10px;padding:11px 12px;cursor:pointer}.rubric-button:hover,.rubric-button:focus{border-color:var(--green);outline:none}.rubric-button strong{display:block;color:var(--green)}.rubric-button span{color:var(--muted);font-size:.9rem}
     .video{margin:34px 0;background:#02060c;border:1px solid #29415f;border-radius:18px;overflow:hidden;box-shadow:0 24px 80px #0008}video{display:block;width:100%;aspect-ratio:16/9}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}.card{background:var(--panel);border:1px solid #29415f;border-radius:14px;padding:20px}.card b{color:var(--green)}
     .chapters{margin:24px 0 34px}.chapters h2{margin-bottom:8px}.chapters p{color:var(--muted);margin-top:0}.chapter-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:9px}.chapter{width:100%;text-align:left;background:var(--panel);color:var(--ink);border:1px solid #29415f;border-radius:10px;padding:10px 12px;cursor:pointer}.chapter:hover,.chapter:focus{border-color:var(--cyan);outline:none}.chapter strong{color:var(--cyan);margin-right:7px}
@@ -23,6 +24,16 @@
   <h1>Build the workflow.<br><span class="accent">Survive the failure.</span></h1>
   <p class="lede">A 3:09 evaluator walkthrough of Resilience Lab: seeded AI-workflow puzzles, controlled faults, inspectable recovery, validation, scoring, human edit, and safe rejection.</p>
   <div class="facts"><span>H.264 · 1280×720</span><span>3:09</span><span>No API key</span><span>Local mock mode</span><span>9 deterministic tests</span></div>
+  <section class="rubric" aria-labelledby="rubric-title">
+    <h2 id="rubric-title">Judge the official 80% behavior core</h2>
+    <p>Choose a criterion to open visible, captioned proof. No API key or audio required. Weights come from the <a href="https://www.topcoder.com/challenges/7fbce8d9-92e2-4770-a4a0-48f29c2b29e5">official challenge</a>; these links route evidence, not claim a score.</p>
+    <div class="rubric-list">
+      <button class="rubric-button" data-time="15"><strong>25% · Builder &amp; complete journey</strong><span>Open baseline trace at 0:15</span></button>
+      <button class="rubric-button" data-time="30"><strong>25% · Failure handling &amp; recovery</strong><span>Open controlled retry at 0:30</span></button>
+      <button class="rubric-button" data-time="75"><strong>15% · Validation &amp; human review</strong><span>Open human control gate at 1:15</span></button>
+      <button class="rubric-button" data-time="45"><strong>15% · Trace &amp; reliability feedback</strong><span>Open recovered trace at 0:45</span></button>
+    </div>
+  </section>
   <section class="video"><video id="demo" controls preload="metadata" poster="preview.jpg"><source src="resilience-lab-demo.mp4" type="video/mp4">Download the MP4 to view the demo.</video></section>
   <section class="chapters" aria-labelledby="chapters-title">
     <h2 id="chapters-title">Evaluator chapters</h2>
@@ -56,7 +67,7 @@
   <footer>Versioned checksums and downloadable assets are published with each GitHub release.</footer>
 </main><script>
   const video = document.getElementById('demo');
-  document.querySelectorAll('.chapter').forEach((button) => button.addEventListener('click', () => {
+  document.querySelectorAll('.chapter, .rubric-button').forEach((button) => button.addEventListener('click', () => {
     video.currentTime = Number(button.dataset.time);
     video.play();
     video.scrollIntoView({behavior: 'smooth', block: 'center'});

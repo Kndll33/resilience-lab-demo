@@ -6,6 +6,15 @@ A 3:09 silent walkthrough of an original browser-accessible AI workflow reliabil
 
 ![Resilience Lab workflow trace](./preview.jpg)
 
+## Official 80% behavior core
+
+The landing page maps the four highest-weight [official challenge criteria](https://www.topcoder.com/challenges/7fbce8d9-92e2-4770-a4a0-48f29c2b29e5) to one-click captioned evidence. These links route evidence; they do not claim a score.
+
+- **25% — Builder & complete journey:** 0:15 baseline trace
+- **25% — Failure handling & recovery:** 0:30 controlled retry
+- **15% — Validation & human review:** 1:15 human control gate
+- **15% — Trace & reliability feedback:** 0:45 recovered trace
+
 ## Evaluator chapters
 
 The silent video has visible captions throughout. The landing page provides one-click chapter controls; direct MP4 timestamps are listed here for quick review.
