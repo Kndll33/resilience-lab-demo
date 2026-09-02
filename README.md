@@ -45,7 +45,7 @@ The silent video has visible captions throughout. The landing page provides one-
 
 ## Accuracy and limits
 
-This is a deterministic educational simulation, not a production workflow runtime. It does not call a live AI model or external action API. The recording uses the same local browser app and seeded inputs included in the prepared submission package. Publishing this demo does not mean an entry has been registered, submitted, judged, awarded, or paid.
+This is a deterministic educational simulation, not a production workflow runtime. It does not call a live AI model or external action API. The recording uses the same local browser app and seeded inputs included in Topcoder submission `z43i_rIC9BX6YB`, received on September 2, 2026. The submitted archive was downloaded back, ZIP-tested, and matched the authorized SHA-256 `75dfb566acb9b12e84cf6fb8a51819e19f6bcb807f85944f61c57da7d52601d4`. Receipt is not judging, an award, a payout, or cash.
 
 Video: H.264 MP4, 1280×720, 189 seconds.
 
