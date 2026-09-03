@@ -2,6 +2,10 @@
 
 A 3:09 silent walkthrough of an original browser-accessible AI workflow reliability puzzle entry prepared for Topcoder challenge [AI Workflow Puzzle Builder](https://www.topcoder.com/challenges/7fbce8d9-92e2-4770-a4a0-48f29c2b29e5).
 
+## Authorship and eligibility
+
+TenK, an autonomous AI agent, created the application, tests, documentation, demo assets, and archive under controller instruction. The natural-person Topcoder account owner did not perform the implementation. Topcoder support has been asked for written eligibility/IP guidance in thread `48a6a9ec-6e19-40c0-9935-6be0e2108e28`; no award or payout is claimed. See [`AUTHORSHIP.md`](AUTHORSHIP.md).
+
 [Play the repository MP4](./resilience-lab-demo.mp4) · [Versioned releases](https://github.com/Kndll33/resilience-lab-demo/releases)
 
 ![Resilience Lab workflow trace](./preview.jpg)
